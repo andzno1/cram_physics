@@ -7,8 +7,12 @@
   (out-info "Setting *transform-listener*")
   (defparameter *transform-listener* (make-instance 'cl-tf2:buffer-client)))
 
-(defun get-elapsed-time ()
-  (out-info"Elapsed time: ~a ms" (- (get-internal-real-time) *start-time*)))
+(defun get-elapsed-time (&optional (log-level :info))
+  (cond
+    ((eq log-level :info)
+     (out-info "Elapsed time: ~a ms" (- (get-internal-real-time) *start-time*)))
+    ((eq log-level :error)
+     (out-error "Elapsed time: ~a ms" (- (get-internal-real-time) *start-time*)))))
 
 (defun color-msg-to-list (msg)
   "Returns a list with the RGB values from a given message `msg' (`std_msgs/ColorRGBA')"

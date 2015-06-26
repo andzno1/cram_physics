@@ -33,10 +33,14 @@ uint32 REMOVE_ALL_OBJECTS_FAILED = 4
   bool computeCollisionsBeforeSimulation
   # Whether to compute collisions for each object after simulation.
   bool computeCollisionsAfterSimulation
-  # Whether to compute visibility for each object.
-  bool computeVisibility
-  # Whether to compute occlusions for each object.
-  bool computeOcclusions
+  # Whether to compute visibility for each object before simulation.
+  bool computeVisibilityBeforeSimulation
+  # Whether to compute visibility for each object after simulation.
+  bool computeVisibilityAfterSimulation
+  # Whether to compute occlusions for each object before simulation.
+  bool computeOcclusionsBeforeSimulation
+  # Whether to compute occlusions for each object after simulation.
+  bool computeOcclusionsAfterSimulation
 
 ---
 
@@ -48,8 +52,10 @@ bool computedContactWithKitchenBeforeSimulation
 bool computedContactWithKitchenAfterSimulation
 bool computedCollisionsBeforeSimulation
 bool computedCollisionsAfterSimulation
-bool computedVisibility
-bool computedOcclusions
+bool computedVisibilityBeforeSimulation
+bool computedVisibilityAfterSimulation
+bool computedOcclusionsBeforeSimulation
+bool computedOcclusionsAfterSimulation
 
 # Information about all worlds that exist or have been created during this service call
 WorldIntel[] worlds

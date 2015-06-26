@@ -8,13 +8,14 @@ uint32 SUGAR = 5
 
 
 # Object's id
-uint64 id
+uint32 id
 
 # Indicates if the object is stable.
 bool isStable
 
 # Indicates if the object is visible.
-bool isVisible
+bool isVisibleBeforeSimulation
+bool isVisibleAfterSimulation
 
 # Indicates if the object had contact with kitchen before simulation.
 bool contactWithKitchenBeforeSimulation
@@ -23,10 +24,11 @@ bool contactWithKitchenBeforeSimulation
 bool contactWithKitchenAfterSimulation
 
 # Has collision with this objects.
-uint64[] collisionWithBeforeSimulation
-uint64[] collisionWithAfterSimulation
+uint32[] collisionWithBeforeSimulation
+uint32[] collisionWithAfterSimulation
 
-uint64[] occludedBy
+uint32[] occludedByBeforeSimulation
+uint32[] occludedByAfterSimulation
 
 # Object's stamped pose.
 geometry_msgs/PoseStamped poseStamped
